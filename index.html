@@ -3,65 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Worksteve's Site</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Navbar Section -->
-     <nav class="navbar">
-        <div class="navbar__container">
-            <a href="#home" id="navbar__logo">COLOR</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="#home" class="navbar__links" id="home-page">
-                        Home
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#about" class="navbar__links" id="about-page">
-                        about
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#contact" class="navbar__links" id="contact-page">
-                        contact
-                    </a>
-                </li>
-                <li class="navbar__btn">
-                    <a href="#sign-up" class="button" id="sign-up">
-                        Sign Up
-                    </a>
-                </li>
-            </ul>
+    <div class="header">
+        <div class="header__bars" id="mini-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-     </nav>
 
-     <div class="hero" id="home">
-        <div class="hero__container">
-            <h1 class="hero__heading">Choose your <span>colors</span></h1>
-            <p class="hero__description">Unlimited Possibilities</p>
-            <button class="main__btn"><a href="#">Explore</a></button>
-        </div>
-     </div>
-    <div class="main" id="about">
-        <div class="main__container">
-            <div class="main__image--container">
-                <div class="main__image--card"><img src="logo.avif" alt="Our Logo"></div>
-            </div>
-            <div class="main__content">
-                <h1>What do we do?</h1>
-                <h2>We help buisnesses steal</h2>
-                <p>Schedule a call to plan a heist</p>
-                <button class="main__btn"><a href="#">Schedule Call</a></button>
-            </div>
-        </div>
+        <nav class="header__links">
+            <a href="#home" class="header__link">Home</a>
+            <a href="PotatoEngine.html" class="header__link">PotatoEngine</a>
+            <a href="projects.html" class="header__link">Projects</a>
+            <a href="#about" class="header__link">About Me</a>
+            <a href="#contact" class="header__link">Contact</a>
+        </nav>
     </div>
-    <p><a href="page2">test more again</a></p>
-    <script src="app.js"></script>
 </body>
 </html>
