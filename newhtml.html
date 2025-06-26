@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    pre code {
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+    .keyword { color: blue; font-weight: bold; }
+    .string { color: green; }
+    .comment { color: gray; font-style: italic; }
+  </style>
+</head>
+<body>
+
+<pre><code id="code-block">
+// This is a comment
+function greet(name) {
+  return "Hello, " + name;
+}
+</code></pre>
+
+<script>
+  const keywords = ["function", "return", "var", "let", "const", "if", "else"];
+  const codeElement = document.getElementById("code-block");
+  let code = codeElement.textContent;
+
+  // Escape HTML special characters
+  code = code
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+  // Highlight comments
+  code = code.replace(/(\/\/.*?$)/gm, '<span class="comment">$1</span>');
+
+  // Highlight strings
+  code = code.replace(/(".*?"|'.*?')/g, '<span class="string">$1</span>');
+
+  // Highlight keywords
+  const keywordPattern = new RegExp("\\b(" + keywords.join("|") + ")\\b", "g");
+  code = code.replace(keywordPattern, '<span class="keyword">$1</span>');
+
+  codeElement.innerHTML = code;
+</script>
+
+</body>
+</html>
