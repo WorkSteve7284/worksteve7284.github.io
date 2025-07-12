@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potato Engine Docs</title>
-    <link rel="stylesheet" href="/Docs.css">
+    <link rel="stylesheet" href="/style/PotatoEngine.css">
+    <link rel="stylesheet" href="/style/Docs.css">
+    <script src="/style/header.js"></script>
+    <script src="/style/sidebar.js"></script>
 </head>
 
 <body>
     <div class="page__layout">
 
-    <div class="header">
-      <nav class="header__links">
-        <a href="/PotatoEngine.html"><img src="/potato.avif" alt="PotatoEngine logo" class="header__logo"></a>
-        <a href="/PotatoEngine.html" class="header__link">Home</a>
-        <a href="/PotatoEngine.html#install" class="header__link">Install</a>
-        <a href="/PotatoEngine.html#tutorials" class="header__link">Tutorials</a>
-        <a href="/PotatoEngine/Docs.html" class="header__link">Docs</a>
-      </nav>
-    </div>
+      <engine-header class="header"></engine-header>
 
-    <div class="main__menu">
-      <nav class="menu__links">
-        <a href="/PotatoEngine/Docs.html" class="home__button"><img src="/potato.avif" alt="PotatoEngine Docs Logo" class="home__logo"></a>
-        <a href="/PotatoEngine/Docs/core.html" class="menu__link">Core</a>
-        <a href="/PotatoEngine/Docs/extra.html" class="menu__link">Extra Libs</a>
-      </nav>
-    </div>
+      <docs-sidebar class="sidebar"></docs-sidebar>
 
-    <div class="main__content">
-      <p>Stuff Here Pls</p>
-    </div>
+      <div class="main__content">
+        <h1>PotatoEngine Docs</h1>
+        <p>Welcome to the PotatoEngine Docs! This website contains all of the details on how PotatoEngine works.</p>
+        <br>
+        <h2>Styling</h2>
+        <p>The various pages on this site use font and background colors to indicate what some words mean.</p>
+        <p><span class="custom__class">Classes</span>: this color indicates that something is a class.</p>
+        <p><span class="custom__function">Functions</span>: this color indicates that something is a function. Depending on the use case, this may or may not include parenthises ().</p>
+        <p><span class="custom__variable" title="const int variables">variables</span>: this color indicates that something is a variable. The type of a variable will usually have been indicated previously, but can also be viewed by hovering over it.</p>
+        <br>
+        <h3><span class="custom__variable">variable</span>, <span class="custom__class">Class</span>, and <span class="custom__function">Function</span> naming conventions</h3>
+        <p>As you may know, there is no correct way to write your code. In languages like C++, you could have all of your code on the same line (but shouldn't). As a result, every programmer has their own way of writing code. All of the official PotatoEngine libraries use snake_case for <span class="custom__variable" title="char variables[2]">variables</span> and Upper_Snake_Case for <span class="custom__class">Classes</span> and <span class="custom__function">Functions</span></p>
+        <p>File names, however, are in PascalCase/UpperCamelCase.</p>
+        <br>
+        <h3><span class="tip">Tips</span> and <span class="warning">Warnings</span></h3>
+        <p>Throughout the docs, there are <span class="tip">tips</span> and <span class="warning">warnings</span>. <span class="tip">Tips</span> are used to help with good coding practice and ease of use, while <span class="warning">warnings</span> are used for telling you to NEVER do something</p>
+      </div>
 
   </div>
 </body>
