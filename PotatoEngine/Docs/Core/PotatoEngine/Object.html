@@ -6,8 +6,10 @@
     <title>Potato Engine Docs</title>
     <link rel="stylesheet" href="/style/PotatoEngine.css">
     <link rel="stylesheet" href="/style/Docs.css">
+    <link rel="stylesheet" href="/style/prism.css">
     <script src="/style/header.js"></script>
     <script src="/style/sidebar.js"></script>
+    <script src="/style/prism.js"></script>
 </head>
 
 <body>
@@ -16,7 +18,56 @@
         <docs-sidebar class="sidebar"></docs-sidebar>
 
         <div class="main__content">
-        
+        <h1><span class="custom__class">Object</span></h1>
+        <p><span class="custom__class">Object</span>s are the second most basic part of a PotatoEngine project, after <span class="custom__class">Component</span>s. An <span class="custom__class">Object</span> may contain any number of <span class="custom__class">Component</span>s.</p>
+        <br>
+        <h2>std::string <span class="custom__variable" title="std::string name">name</span></h2>
+        <p><span class="custom__variable" title="std::string name">name</span> is a string used as an identifier. It can be used to find an <span class="custom__class">Object</span>.</p>
+        <br>
+        <h2>long int <span class="custom__variable" title="long int uid">uid</span></h2>
+        <p><span class="custom__variable" title="long int uid">uid</span> is a unique identifier for each <span class="custom__class">Object</span>. It is set on the creation of an <span class="custom__class">Object</span></p>
+        <br>
+        <h2>std::vector&lt;std::unique_ptr&lt;<span class="custom__class">Component</span>&gt;&gt; components</h2>
+        <p><span class="custom__variable" title="std::vector&lt;std::unique_ptr&lt;Component&gt;&gt; components">components</span> contains pointers to all child <span class="custom__class">Component</span>s.</p>
+        <br>
+        <h2>T* <span class="custom__function">Add_Component</span>(Args&&... args)</h2>
+        <p></p>
+        <br>
+        <h2>T* <span class="custom__function">Get_Component</span>()</h2>
+        <p></p>
+        <br>
+        <h2>void <span class="custom__function">Start</span>()</h2>
+        <p><span class="custom__function">Start</span> is called when a <span class="custom__class">Scene</span> is created or activated for the first time, or when this <span class="custom__class">Object</span> is first created. <span class="custom__function">Start</span> calls its counterparts in all child <span class="custom__class">Component</span>s.</p>
+        <pre><code class="lang-cpp">
+            // Implementation in Object.hpp
+            void Start() {
+                for (auto& component : components) {
+                    component.Start();
+                }
+            }
+        </code></pre>
+        <br>
+        <h2>void <span class="custom__function">Update</span>(double <span class="custom__variable" title="double delta_time">delta_time</span>)</h2>
+        <p><span class="custom__function">Update</span> is called as often as the engine can, as long as it is less than 1ms. <span class="custom__function">Update</span> calls its counterparts in child <span class="custom__class">Component</span>s.</p>
+        <pre><code class="lang-cpp">
+            // Implementation in Object.hpp
+            void Update(double delta_time) {
+                for (auto& component : components) {
+                    component.Update(delta_time);
+                }
+            }
+        </code></pre>
+        <br>
+        <h2>void <span class="custom__function">Fixed_Update</span>(double <span class="custom__variable" title="double delta_time">delta_time</span>)</h2>
+        <p><span class="custom__function">Fixed_Update</span> is called as close to a fixed rate as possible (by default, every 1/60th of a second). It calls its counterparts in child <span class="custom__class">Compoment</span>s.</p>
+        <pre><code class="lang-cpp">
+            // Implementation in Object.hpp
+            void Fixed_Update(double delta_time) {
+                for (auto& component : components) {
+                    component.Fixed_Update(delta_time);
+                }
+            }
+        </code></pre>
         </div>
     </div>
 </body>
