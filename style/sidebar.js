@@ -60,7 +60,7 @@ class Sidebar extends HTMLElement {
             <div class="sidebar__level1">
                 <sidebar-element><a href="/PotatoEngine/Docs/Core.html" class="sidebar__link">Core</a></sidebar-element>
                 <div class="sidebar__level2 collapsible">
-                    <sidebar-element><a href="/PotatoEngine/Docs/Core/PotatoEngine.html" class="sidebar__link">PotatoEngine</a></sidebar-element>
+                    <sidebar-element><a href="/PotatoEngine/Docs/Core/PotatoEngine" class="sidebar__link">PotatoEngine</a></sidebar-element>
                         <div class="sidebar__level3 collapsible">
                             <a href="/PotatoEngine/Docs/Core/PotatoEngine/Master_Scene.html" class="sidebar__link">Master_Scene</a>
                             <a href="/PotatoEngine/Docs/Core/PotatoEngine/Scene.html" class="sidebar__link">Scene</a>
@@ -89,6 +89,7 @@ class Sidebar extends HTMLElement {
                     <sidebar-element><a href="/PotatoEngine/Docs/Core/Rendering.html" class="sidebar__link">Rendering</a></sidebar-element>
                     <sidebar-element><a href="/PotatoEngine/Docs/Core/Input.html" class="sidebar__link">Input</a></sidebar-element>
                 </div>
+                <sidebar-element><a href="/PotatoEngine/Docs/Extra-Libs.html" class="sidebar__link">Extra Libs</a></sidebar-element>
             </div>
         </nav>
         `;

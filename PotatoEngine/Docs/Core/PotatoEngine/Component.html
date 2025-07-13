@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Engine Docs</title>
+    <link rel="stylesheet" href="/style/PotatoEngine.css">
+    <link rel="stylesheet" href="/style/Docs.css">
+    <link rel="stylesheet" href="/style/prism.css">
+    <script src="/style/header.js"></script>
+    <script src="/style/sidebar.js"></script>
+    <script src="/style/prism.js"></script>
+</head>
+
+<body>
+    <div class="page__layout">
+        <engine-header class="header"></engine-header>
+        <docs-sidebar class="sidebar"></docs-sidebar>
+
+        <div class="main__content">
+            <h1><span class="custom__class">Component</span></h1>
+            <p><span class="custom__class">Component</span>s are the most basic component of a project in PotatoEngine. a <span class="custom__class">Component</span> contains your code, so nearly all of your code will be within them.</p>
+            <br>
+            <h2><span class="custom__class">Object</span> *<span class="custom__variable" title="Object *object">object</span></h2>
+            <p><span class="custom__variable">object</span> is a pointer to the <span class="custom__class">Object</span> which owns this <span class="custom__class">Component</span>. <span class="custom__variable" title="Object *object">object</span> is set during the creation of a <span class="custom__class">Component</span>.</p>
+            <br>
+            <h2>void <span class="custom__function">Start</span>()</h2>
+            <p><span class="custom__function">Start</span> is called when a <span class="custom__class">Scene</span> is first activated or a <span class="custom__class">Component</span> or <span class="custom__class">Object</span> is created during runtime.</p>
+            <br>
+            <h2>void <span class="custom__function">Update</span>(double <span class="custom__variable" title="double delta_time">delta_time</span>)</h2>
+            <p><span class="custom__function">Update</span> is called as often as the engine can, as long as the time between calls is greater than 1ms. <span class="custom__variable" title="double delta_time">delta_time</span> is equal to the time since the last call of <span class="custom__function">Update</span>.</p>
+            <br>
+            <h2>void <span class="custom__function">Fixed_Update</span>(double <span class="custom__variable" title="double delta_time">delta_time</span>)</h2>
+            <p><span class="custom__function">Fixed_Update</span> is called as close to a fixed time step as possible. By default, this value is every 1/60th of a second. <span class="custom__variable" title="double delta_time">delta_time</span> is the time since the last call of <span class="custom__function">Fixed_Update</span></p>
+            <br>
+            <h2>Usage</h2>
+            <p>This script is an example of how you might write a <span class="custom__class">Component</span>. It prints the number of <span class="custom__function">Update</span>s and the run time to console.</p>
+            <pre><code class="language-cpp">
+            // example.hpp
+
+            // Includes
+            #include &lt;iostream&gt;
+            #include &lt;string&gt;
+            #include "PotatoEngine.h"
+
+            class Example_Component : public Component {            
+                int updates = 0;
+                double fixed_time = 0;
+
+                void Start() {
+                    object->name = "Example Object";
+                }
+
+                void Update() {
+                    updates++;
+                    std::cout &lt;&lt; updates &lt;&lt; std::endl;
+                }
+
+                void Fixed_Update(double delta_time) {
+                    fixed_time += delta_time;
+                    std:: cout &lt;&lt; fixed_updates &lt;&lt; std::endl;
+                }
+            };
+            </code></pre>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Engine Docs</title>
+    <link rel="stylesheet" href="/style/PotatoEngine.css">
+    <link rel="stylesheet" href="/style/Docs.css">
+    <script src="/style/header.js"></script>
+    <script src="/style/sidebar.js"></script>
+</head>
+
+<body>
+    <div class="page__layout">
+        <engine-header class="header"></engine-header>
+        <docs-sidebar class="sidebar"></docs-sidebar>
+
+        <div class="main__content">
+            <h1>PotatoEngine Library</h1>
+            <p>The PotatoEngine library contains everything you need to have a very basic game. If you don't use this library, you basically aren't using PotatoEngine.</p>
+            <br>
+            <p>The PotatoEngine library contains five main classes, <span class="custom__class">Master_Scene</span>, <span class="custom__class">Scene</span>, <span class="custom__class">Object</span>, <span class="custom__class">Component</span>, and <span class="custom__class">Event</span>.</p>
+            <p>There is only one <span class="custom__class">Master_Scene</span>, which handles all of the other <span class="custom__class">Scene</span>s. <span class="custom__class">Scene</span>s contain <span class="custom__class">Objects</span>, which contain <span class="custom__class">Components</span>.</p>
+            <p><span class="custom__class">Component</span>s are where your code goes.</p>
+            <p><span class="custom__class">Event</span>s are broadcast over the event system to whichever <span class="custom__Class">Components</span> are listening to them.</p>
+        </div>
+    </div>
+</body>

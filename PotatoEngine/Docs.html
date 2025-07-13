@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/style/Docs.css">
     <script src="/style/header.js"></script>
     <script src="/style/sidebar.js"></script>
+
+    <link rel="stylesheet" href="/style/prism.css">
+    <script src="/style/prism.js"></script>
 </head>
 
 <body>
@@ -33,6 +36,15 @@
         <br>
         <h3><span class="tip">Tips</span> and <span class="warning">Warnings</span></h3>
         <p>Throughout the docs, there are <span class="tip">tips</span> and <span class="warning">warnings</span>. <span class="tip">Tips</span> are used to help with good coding practice and ease of use, while <span class="warning">warnings</span> are used for telling you to NEVER do something</p>
+        <br>
+        <h3>Code Snippets</h3>
+        <p>The docs also use <a href="https://prismjs.com/">Prism.js</a> to format code snippets.</p>
+<pre><code class="language-cpp">
+void hello_world(int i) {
+  std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+  i++;
+}
+</code></pre>
       </div>
 
   </div>
